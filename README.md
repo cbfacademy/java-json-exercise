@@ -103,4 +103,3 @@ The `saveToFile` method should:
 [1]: https://docs.oracle.com/javase/11/docs/api/index.html
 [2]: https://junit.org/junit5/
 [3]: https://maven.apache.org/
-# java-json-exercise
