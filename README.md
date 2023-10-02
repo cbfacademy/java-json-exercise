@@ -36,13 +36,13 @@ The `save` method should:
 - create `outputFile` if it doesn't exist and update the file to include the new object, if it does.
 
 ### :bookmark: Note:
-The paths to `inputFile` and `outputFile` are relative to the root directory of this repository (e.g. `exercises/api/src/main/resources/employees.json`)
+The paths to `inputFile` and `outputFile` are relative to the root directory of this repository. 
 
 ## :white_check_mark: Verify Your Implementation
 
 To verify that your code works as expected, run the provided unit tests.
 
-In your terminal, ensure that you are in the `apis` folder. Then run the following command in your terminal:
+In your terminal, ensure that you are in the folder for this exercise. Then run the following command in your terminal:
 
 ```shell
 ./mvnw clean test
