@@ -30,8 +30,6 @@ public class JSONFileHandlerTest {
     public void setUp() {
         try {
             tempFile = Files.createFile(tempDir.resolve("temp.json"));
-            // Files.writeString(tempFile, "[" + new
-            // ObjectMapper().writeValueAsString(employee) + "]");
             Files.writeString(tempFile, "[" + new GsonBuilder().setPrettyPrinting().create().toJson(employee) + "]");
         } catch (IOException e) {
             e.printStackTrace();
