@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import com.cbfacademy.Employee.Employee;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.GsonBuilder;
 
 @DisplayName(value = "JSON File Exercise")
 public class JSONFileHandlerTest {
@@ -30,7 +30,9 @@ public class JSONFileHandlerTest {
     public void setUp() {
         try {
             tempFile = Files.createFile(tempDir.resolve("temp.json"));
-            Files.writeString(tempFile, "[" + new ObjectMapper().writeValueAsString(employee) + "]");
+            // Files.writeString(tempFile, "[" + new
+            // ObjectMapper().writeValueAsString(employee) + "]");
+            Files.writeString(tempFile, "[" + new GsonBuilder().setPrettyPrinting().create().toJson(employee) + "]");
         } catch (IOException e) {
             e.printStackTrace();
         }

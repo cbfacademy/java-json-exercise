@@ -2,18 +2,13 @@ package com.cbfacademy.Employee;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Employee {
     private int id;
     private String firstName;
     private String lastName;
     private List<String> roles;
 
-    @JsonCreator
-    public Employee(@JsonProperty("id") int id, @JsonProperty("fileName") String firstName,
-            @JsonProperty("lastName") String lastName, @JsonProperty("roles") List<String> roles) {
+    public Employee(int id, String firstName, String lastName, List<String> roles) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
